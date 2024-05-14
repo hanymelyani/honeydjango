@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tambahkan meta viewport -->
+    <title>Hany</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> <!-- Tambahkan file CSS terpisah -->
+    <style>
+        .circle {
+            text-align: center;
+            margin-top: 50px; /* Atur margin atas sesuai kebutuhan */
+        }
+        .circle h1 {
+            color: white; /* Warna teks menjadi putih */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font-family indah */
+            position: relative; /* Posision relatif untuk menetapkan z-index */
+            z-index: 1; /* Menetapkan z-index agar teks tetap di atas gambar */
+        }
+        .circle image {
+            max-width: 100%; /* Maksimum lebar gambar adalah 100% */
+            height: auto; /* Tinggi gambar akan menyesuaikan proporsi aslinya */
+        }
+        .centered-text {
+            text-align: center;
+            padding: 0 20px; /* Tambahkan padding kiri dan kanan */
+        }
+        .description {
+            padding: 0 20px; /* Tambahkan padding kiri dan kanan untuk teks keterangan */
+            text-align: justify; /* Membuat teks menjadi rata kiri */
+        }
+        /* Tambahkan CSS untuk judul */
+        .welcome-container {
+        background-image: url('https://i.pinimg.com/564x/6a/eb/76/6aeb76f465cb718514d9e87f73ca5384.jpg'); /* Perhatikan penggunaan forward slash di sini */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #ff0080f8;
+        }
+
+        .welcome-title {
+        color: #ffffff; /* Warna teks menjadi putih */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font-family indah */
+        margin: 0; /* Hapus margin bawaan */
+        text-align: center; /* Pusatkan teks */
+        position: absolute; /* Posision absolut untuk menempatkan di tengah */
+        top: 50%; /* Pusatkan di tengah vertikal */
+        left: 50%; /* Pusatkan di tengah horizontal */
+        transform: translate(-50%, -50%); /* Pusatkan elemen */
+        z-index: 2; /* Menetapkan z-index agar teks berada di atas gambar */
+        background: #c00770f8; /* Latar belakang dengan ungu kegelapan */
+        padding: 10px 20px; /* Padding untuk memberi jarak dari teks ke tepi latar belakang */
+        }
+
+        /* CSS untuk footer */
+        footer {
+            background-color: #c00770f8; /* Warna latar belakang footer */
+            color: #ffffff; /* Warna teks menjadi putih */
+            text-align: center; /* Pusatkan teks */
+            padding: 20px 0; /* Tambahkan padding atas dan bawah */
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MyBlog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="{% url "index" %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url "about" %}">About</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contact
+        </a>
+        
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+</nav>
+
+<div class="container-fluid bg-white text-light">
+    <!-- Tambahkan lapisan div untuk judul -->
+    <div class="welcome-container"></div>
+    <h1 class="welcome-title">Welcome to My Blog</h1>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Copyright 2024 Hany Melyani Putri</p>
+    <p>Email: hanymelyanip@gmail.com</p>
+    <p>Phone: 085256492754</p>
+</footer>
+
+
+</body>
+</html>
